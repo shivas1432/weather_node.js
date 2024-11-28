@@ -1,0 +1,10 @@
+{
+    "/public/js/app.js": "/public/js/app.js",
+    "/public/js/sidebar.js": "/public/js/sidebar.js",
+    "/public/js/weather.js": "/public/js/weather.js",
+    "/public/js/forcast.js": "/public/js/forcast.js",
+    "/public/css/forcast.css": "/public/css/forcast.css",
+    "/public/css/styles.css": "/public/css/styles.css",
+    "/public/css/sidebar.css": "/public/css/sidebar.css",
+    "/public/css/app.css": "/public/css/app.css"
+}

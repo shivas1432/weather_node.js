@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forecast</title>
+    <link rel="stylesheet" href="/css/forcast.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <div class="main-container">
+        <h1>Weather Forecast</h1>
+
+        <% if (forecastType === 'hourly') { %>
+            <h2>Hourly Forecast</h2>
+            <div id="day-forecast" class="forecast-box">
+                <p>Hourly forecast data will be displayed here.</p>
+            </div>
+        <% } else if (forecastType === '7-day') { %>
+            <h2>7-Day Forecast</h2>
+            <div id="weekly-forecast" class="forecast-box">
+                <p>7-day forecast data will be displayed here.</p>
+            </div>
+        <% } else if (forecastType === 'monthly') { %>
+            <h2>Monthly Forecast</h2>
+            <div id="monthly-forecast" class="forecast-box">
+                <p>Monthly forecast data will be displayed here.</p>
+            </div>
+        <% } %>
+    </div>
+
+
+    <script>
+        const openWeatherApiKey = '<%= process.env.OPENWEATHERMAP_API_KEY %>';
+        const forecastType = '<%= forecastType %>'; 
+    </script>
+    <script src="/js/forcast.js"></script>
+    <script src="/js/sidebar.js"></script>
+</body>
+</html>

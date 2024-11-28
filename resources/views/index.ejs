@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+
+<%- include('partials/header') %>
+
+<div class="weather-summary">
+    <video autoplay muted loop id="background-video">
+        <source src="/img/5607698-uhd_3840_2160_30fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="weather-content">
+  
+    <h1 id="temperature">28°C</h1>
+    <p id="weather-description">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-cloud-rain">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7"/>
+            <path d="M11 13v2m0 3v2m4 -5v2m0 3v2"/>
+        </svg>
+        Rainy Storm Clouds
+    </p>
+    
+    <hr>
+    <div class="location-date">
+        <label for="location">Location:</label>
+        <button id="select-location">Select Location</button>
+        <p>Date: <span id="date"></span></p>
+        <p id="updated-time">Updated: <span id="time"></span></p>
+    </div>
+
+    
+    <div id="map-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="map" style="height: 500px; width: 100%;"></div>
+            <button id="confirm-location">Confirm Location</button>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<script>
+    const openWeatherApiKey = '<%= process.env.OPENWEATHERMAP_API_KEY %>';
+</script>
+
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+
+<script src="/js/weather.js"></script>
+
+</body>
+</html>
