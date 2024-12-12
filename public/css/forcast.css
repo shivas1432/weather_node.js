@@ -26,7 +26,8 @@ h2 {
 }
 
 .main-container {
-    max-width: 1200px;
+    max-width: 1000px;
+    margin-left: 200px;
     margin: 20px auto;
     padding: 20px;
     background: white;
