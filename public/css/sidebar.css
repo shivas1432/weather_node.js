@@ -42,7 +42,7 @@
        -moz-user-select: none;
             user-select: none;
     max-width: 18rem;
-    min-width: 4.5rem;
+    min-width: 4rem;
     display: flex;
     color: var(--white);
     border: 1px solid #252C36;
